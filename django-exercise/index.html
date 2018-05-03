@@ -22,13 +22,13 @@
 		            return sParameterName[1];
 		        }
 			}
-			var score = GetURLParameter("score");
-			if (score === "chopin") {
-				window.location.assign("./chopin.html");
-			}
-			if (score === "brahms") {
-				window.location.assign("./brahms.html");
-			}
+			var qScore = GetURLParameter("score");
+			var scores = ['chopin', 'brahms']
+			for (var i = 0; i < scores.length; i++) {
+				if (qScore === scores[i]) {
+					window.location.assign(scores[i]+".html");
+				}
+			} 
 		</script>
 	</body>
 </html>
