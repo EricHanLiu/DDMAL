@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<title>
+			Brahms
+		</title>
+		<script src="verovio-toolkit.js"></script>
+		<script src="jquery.js"></script>
+		<style>
+			#pdf_output {
+				position: absolute;
+				left: 0;
+				width: 50%;
+				height: 100%;
+			}
+			#svg_output {
+				position: absolute;
+				right: 0;
+				width: 50%;
+				height: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<a href="index.html">Go back to index</a>
+		<div>
+			<div id="pdf_output">
+				<embed src="scores/Brahms_StringQuartet_Op51_No1.pdf" width="100%" height="100%"/>
+			</div>
+			<div id="svg_output"></div>
+		</div>
+
+		<script type="text/javascript">
+			var verovioToolkit = new verovio.toolkit();
+			$.get({
+				url: "scores/Brahms_StringQuartet_Op51_No1.mei",
+				datatype: "text",
+				success: function(data) {
+					var svg = verovioToolkit.renderData(data, {});
+					$("#svg_output").html(svg);
+					$("svg").width("100%");	
+					$("svg").height("100%");
+				}
+			});
+		</script>
+	</body>
+</html>
