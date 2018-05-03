@@ -6,4 +6,4 @@ from django.shortcuts import render
 def index(request):
     score_list = Scores.objects.order_by("composer")[:]
     context = {'score_list': score_list}
-    return render(request, 'scores.html', context)
+    return render(request, 'index.html', context)
