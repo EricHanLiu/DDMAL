@@ -8,11 +8,12 @@
 	</head>
 	<body>
 		<div id="svg_output"></div>
+		<div id="pdf_output"></div>
 
 		<script type="text/javascript">
-			var vtk = new verovio.toolkit();
+			var verovioToolkit = new verovio.toolkit();
 			$.get({
-				url: "chopin.mei",
+				url: "scores/Chopin_Etude_op.10_no.9.mei",
 				datatype: "text",
 				success: function(data) {
 					var svg = verovioToolkit.renderData(data, {});
