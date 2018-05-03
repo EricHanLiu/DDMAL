@@ -7,20 +7,21 @@
 		<script src="jquery.js"></script>
 	</head>
 	<body>
-		<div id="svg_output"></div>
-		<div id="pdf_output"></div>
+		<h1> Score Index Page </h1>
+		<h3> Use the links below to navigate to the given composer's score </h3>
+		<ul>
+			<li><a href="chopin.html">Chopin Scores</a></li>
+			<li><a href="brahms.html">Brahms Scores</a></li>
+		</ul>
 
 		<script type="text/javascript">
-			var verovioToolkit = new verovio.toolkit();
-			$.get({
-				url: "scores/Chopin_Etude_op.10_no.9.mei",
-				datatype: "text",
-				success: function(data) {
-					var svg = verovioToolkit.renderData(data, {});
-					$("#svg_output").html(svg);
-					//colorMeasure();
-				}
-			});
+			function GetURLParameter(sParam) {
+			    var sPageURL = window.location.search.substring(1);
+	        	var sParameterName = sURLVariables[i].split('=');
+		        if (sParameterName[0] == sParam) {
+		            return sParameterName[1];
+		        }
+			}
 		</script>
 	</body>
 </html>
