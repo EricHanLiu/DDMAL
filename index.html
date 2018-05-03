@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<title>
+			My Verovio Example
+		</title>
+		<script src="verovio-toolkit.js"></script>
+		<script src="jquery.js"></script>
+	</head>
+	<body>
+		<div id="svg_output"></div>
+
+		<script type="text/javascript">
+			var vtk = new verovio.toolkit();
+			$.get({
+				url: "chopin.mei",
+				datatype: "text",
+				success: function(data) {
+					var svg = verovioToolkit.renderData(data, {});
+					$("#svg_output").html(svg);
+					//colorMeasure();
+				}
+			});
+		</script>
+	</body>
+</html>
