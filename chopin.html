@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<title>
+			Chopin
+		</title>
+		<script src="verovio-toolkit.js"></script>
+		<script src="jquery.js"></script>
+		<
+	</head>
+	<body>
+		<a href="index.html">Go back to index</a>
+		<div>
+			<div id="pdf_output">
+				<embed src="scores/Chopin_Etude_op.10_no.9.pdf" width="40%" height="100%"/>
+			</div>
+			<div id="svg_output" style="float: right;"></div>
+		</div>
+
+		<script type="text/javascript">
+			var verovioToolkit = new verovio.toolkit();
+			$.get({
+				url: "scores/Chopin_Etude_op.10_no.9.mei",
+				datatype: "text",
+				success: function(data) {
+					var svg = verovioToolkit.renderData(data, {});
+					$("#svg_output").html(svg);
+					$("svg").width("40%");	
+					$("svg").height("100%")	
+				}
+			});
+		</script>
+	</body>
+</html>
