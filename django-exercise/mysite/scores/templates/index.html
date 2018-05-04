@@ -3,8 +3,8 @@
 		<title>
 			Score Index
 		</title>
-		<script src="../static/verovio-toolkit.js"></script>
-		<script src="../static/jquery.js"></script>
+		<script src="/static/verovio-toolkit.js"></script>
+		<script src="/static/jquery.js"></script>
 	</head>
 	<body>
 		<h1> Score Index Page </h1>
@@ -12,7 +12,7 @@
 		<ul>
 			{% for score in score_list %}
 				<li>
-					<a href="../static/{{score.composer}}.html">{{score.composer}}</a>
+					<a href="score_viewer/{{score.composer}}">{{score.composer}}</a>
 				</li>
 			{% endfor %}
 		</ul>

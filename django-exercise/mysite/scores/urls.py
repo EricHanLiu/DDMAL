@@ -4,4 +4,5 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='index'),
+    path('score_viewer/<composer>', views.score_viewer, name='score_viewer'),
 ]
