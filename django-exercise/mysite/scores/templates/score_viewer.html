@@ -24,7 +24,7 @@
 		{{score_object.composer}}
 		<div>
 			<div id="pdf_output">
-				<embed src="/{{score_object.scorePDF}}" width="100%" height="100%"/>
+				<embed src="{{score_object.scorePDF.url}}" width="100%" height="100%"/>
 			</div>
 			<div id="svg_output"></div>
 		</div>
@@ -32,7 +32,7 @@
 		<script type="text/javascript">
 			var verovioToolkit = new verovio.toolkit();
 			$.get({
-				url: "/{{score_object.scoreMEI}}",
+				url: "{{score_object.scoreMEI.url}}",
 				datatype: "text",
 				success: function(data) {
 					var svg = verovioToolkit.renderData(data, {});
