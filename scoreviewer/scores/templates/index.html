@@ -5,6 +5,7 @@
 		</title>
 		<script src="/static/verovio-toolkit.js"></script>
 		<script src="/static/jquery.js"></script>
+		<link rel="stylesheet" type="text/css" href="/static/style.css">
 	</head>
 	<body>
 		<h1> Score Index Page </h1>
@@ -16,16 +17,5 @@
 				</li>
 			{% endfor %}
 		</ul>
-
-		<script type="text/javascript">
-			function GetURLParameter(sParam) {
-			    var sPageURL = window.location.search.substring(1);
-	        	var sParameterName = sPageURL.split('=');
-		        if (sParameterName[0] === sParam) {
-		            return sParameterName[1];
-		        }
-			}
-			var qScore = GetURLParameter("score");
-		</script>
 	</body>
 </html>

@@ -1,0 +1,29 @@
+#pdf_output {
+	position: absolute;
+	left: 0;
+	width: 50%;
+	height: 100%;
+}
+#svg_output {
+	position: absolute;
+	right: 0;
+	width: 50%;
+	height: 100%;
+}
+body {
+	padding: 1%;
+}
+h3 {
+	color: midnightblue;
+}
+a {
+	text-decoration: none;
+	color: tomato;
+}
+a:hover {
+	color: midnightblue;
+}
+span {
+	position: absolute;
+	right: 1%;
+}
